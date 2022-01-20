@@ -1,4 +1,10 @@
-const staticCacheName = "sw-cache";
+const staticCacheName = "sw-cache-2022-1-20-1-10-48";
+
+caches.keys().then(function (names) {
+  for (let name of names) {
+    if (name !== staticCacheName) caches.delete(name);
+  }
+});
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
