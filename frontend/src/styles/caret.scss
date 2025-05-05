@@ -1,0 +1,69 @@
+#caret {
+  height: 1.2em;
+  background: var(--caret-color);
+  animation: caretFlashSmooth 1s infinite;
+  position: absolute;
+  border-radius: var(--roundness);
+  // transition: 0.05s;
+  transform-origin: top left;
+}
+
+#paceCaret {
+  height: 1.2em;
+  background: var(--sub-color);
+  opacity: 0.5;
+  position: absolute;
+  border-radius: var(--roundness);
+  // transition: 0.25s;
+  transform-origin: top left;
+}
+
+#caret,
+#paceCaret {
+  &.off {
+    width: 0;
+  }
+
+  &.default {
+    width: 0.1em;
+  }
+
+  &.carrot {
+    background-color: transparent;
+    background-image: url("/images/carrot.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 0.25em;
+  }
+
+  &.banana {
+    background-color: transparent;
+    background-image: url("/images/banana.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1em;
+  }
+
+  &.block {
+    width: 0.5em;
+    border-radius: 0;
+    z-index: -1;
+    border-radius: calc(var(--roundness) / 4);
+  }
+
+  &.outline {
+    @extend #caret, .block;
+    animation-name: none;
+    background: transparent;
+    border: 0.05em solid var(--caret-color);
+    border-radius: calc(var(--roundness) / 4);
+  }
+
+  &.underline {
+    height: 0.1em;
+    width: 0.5em;
+    margin-top: 1.2em;
+  }
+}

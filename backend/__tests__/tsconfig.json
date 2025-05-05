@@ -1,0 +1,9 @@
+{
+  "extends": "@monkeytype/typescript-config/base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "types": ["vitest/globals"]
+  },
+  "files": ["vitest.d.ts"],
+  "include": ["./**/*.ts", "./**/*.spec.ts", "./setup-tests.ts"]
+}

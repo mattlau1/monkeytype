@@ -1,0 +1,113 @@
+@keyframes loader {
+  0% {
+    width: 0;
+    left: 0;
+  }
+
+  50% {
+    width: 100%;
+    left: 0;
+  }
+
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes caretFlashSmooth {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes caretFlashHard {
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flashKey {
+  from {
+    color: var(--bg-color);
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+  }
+
+  to {
+    color: var(--sub-color);
+    background-color: var(--bg-color);
+    border-color: var(--sub-color);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(2px, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-2px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(2px, 0) rotate(0deg);
+  }
+}
+
+@keyframes flashHighlight {
+  0% {
+    background-color: var(--bg-color) !important;
+  }
+  10% {
+    background-color: var(--main-color) !important;
+  }
+  40% {
+    background-color: var(--main-color) !important;
+  }
+  100% {
+    background-color: var(--bg-color) !important;
+  }
+}
+
+@keyframes rgb-bg {
+  0% {
+    background: hsl(120, 39%, 49%);
+  }
+  20% {
+    background: hsl(192, 48%, 48%);
+  }
+  40% {
+    background: hsl(264, 90%, 58%);
+  }
+  60% {
+    background: hsl(357, 89%, 50%);
+  }
+  80% {
+    background: hsl(46, 100%, 51%);
+  }
+  100% {
+    background: hsl(120, 39%, 49%);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    bottom: 100%;
+  }
+  80% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}

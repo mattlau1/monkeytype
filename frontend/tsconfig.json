@@ -1,0 +1,14 @@
+{
+  "extends": "@monkeytype/typescript-config/base.json",
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["vite/client", "node", "jquery"],
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "allowUmdGlobalAccess": true,
+    "target": "ES6",
+    "noEmit": true
+  },
+  "include": ["./src/**/*.ts", "./scripts/**/*.ts"],
+  "exclude": ["node_modules", "build", "setup-tests.ts", "**/*.spec.ts"]
+}

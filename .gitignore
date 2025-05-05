@@ -48,6 +48,7 @@ build/Release
 
 # Dependency directories
 node_modules/
+node_modules_bak/
 
 # Optional npm cache directory
 .npm
@@ -68,8 +69,11 @@ node_modules/
 .env
 
 #vs code
-.vscode
+.vscode/*
+.vscode/.*
 *.code-workspace
+!monkeytype.code-workspace
+
 
 .idea
 
@@ -77,16 +81,22 @@ node_modules/
 .firebaserc
 .firebaserc_copy
 serviceAccountKey*.json
+!docker/serviceAccountKey-example.json
+frontend/src/ts/constants/firebase-config.ts
+frontend/src/ts/constants/firebase-config-live.ts
 
 #generated files
 dist/
+frontend/public/
+backend/globalConfig.json
+backend/server.version
+vite-build/
 
 #cloudflare y
 .cloudflareKey.txt
 .cloudflareKey_copy.txt
-purgeCfCache.sh
 
-static/adtest.html
+frontend/static/adtest.html
 backend/lastId.txt
 backend/log_success.txt
 backend/credentials/*.json
@@ -95,4 +105,26 @@ backend/.env
 static/adtest.html
 backend/migrationStats.txt
 
-backend/anticheat
+# Madge
+dep-graph.png
+
+# TypeScript
+build/
+backend/workers
+
+#scripts
+updateContributors.js
+removeDupes.js
+content-validation.js
+
+ads.txt
+updateContributors.mjs
+copyAnticheatToDev.sh
+
+
+# ignore generated fonts
+frontend/src/webfonts-generated
+frontend/static/webfonts-preview
+
+.turbo
+frontend/.env.sentry-build-plugin
